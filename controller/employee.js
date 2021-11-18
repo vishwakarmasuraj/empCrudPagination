@@ -89,8 +89,4 @@ const delEmployee = async (req, res) => {
         return errorHandler(res, constants.ERR_MSG)
     }
 }
-
-let str = 'abc';
-console.log(str.lastIndexOf('b', 15))
-
 module.exports = { addEmployee, getEmployee, updateEmployee, delEmployee, getEmpBySearching }
