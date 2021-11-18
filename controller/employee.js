@@ -11,6 +11,7 @@ const bcrypt = require('bcrypt');
  */
 const addEmployee = async (req, res) => {
     try {
+        console.log(req.body)
         req.body.password = await bcrypt.hash(req.body.password, constants.ROUND)
         const emp = await new employeeModel(req.body)
         await emp.save()
