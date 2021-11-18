@@ -90,4 +90,7 @@ const delEmployee = async (req, res) => {
     }
 }
 
+let str = 'abc';
+console.log(str.lastIndexOf('b', 15))
+
 module.exports = { addEmployee, getEmployee, updateEmployee, delEmployee, getEmpBySearching }
