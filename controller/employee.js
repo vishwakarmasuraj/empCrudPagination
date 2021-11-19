@@ -68,7 +68,7 @@ const getEmpBySearching = async (req, res) => {
 const updateEmployee = async (req, res) => {
     try {
         const id = req.params.id
-        const result = await employeeModel.findByIdAndUpdate({ _id: id }, { $set: req.body })
+        const result = await employeeModel.findByIdAndUpdate({ _id: id }, { $set: req.body }).select('-password')
         successHandler(res, constants.EMP_UPDATE_MSG, result)
     } catch (error) {
         return errorHandler(res, constants.ERR_MSG)
